@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio Website</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 
     <style>
         html {
@@ -23,6 +24,11 @@
             <a href="blog.html">Blog</a>
             <a href="contact.html">Contact</a>
         </nav>
+        <div id="hamburger" class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
     </header>
 
     <section id="home" class="home">
@@ -35,6 +41,7 @@
 
     <section id="gallery">
         <h2>Gallery</h2>
+        <div class="gallery-horizontal">
         <figure>
             <img src="images/foto1.jpg" width="150" height="200" alt="Foto 1">
         </figure>
@@ -47,6 +54,7 @@
         <figure>
             <img src="images/foto4.jpg" width="150" height="200" alt="Foto 3">
         </figure>
+    </div>
     </section>
 
     <section id="blog">

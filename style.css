@@ -29,6 +29,7 @@ body {
     overflow-x: hidden;
 }
 
+
 /* HEADER */
 header {
     width: 100%;
@@ -78,6 +79,7 @@ nav a:hover {
 nav a:hover::after {
     width: 100%;
 }
+
 
 /* HOME */
 section {
@@ -133,6 +135,7 @@ section {
     box-shadow: 0 4px 15px var(--shadow);
 }
 
+
 /* GALLERY */
 #gallery {
     padding: 4rem 2rem;
@@ -142,47 +145,49 @@ section {
 
 #gallery h2 {
     margin-bottom: 2rem;
-    color: #4682b4;
+    color: var(--sky-blue);
     font-size: 3rem;
     font-weight: 700;
 }
 
 .gallery-horizontal {
-    display: flex; 
-    justify-content: center; 
-    gap: 2rem; 
-    flex-wrap: wrap; 
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
 }
 
 .gallery-horizontal figure {
     width: 100%;
     max-width: 300px; 
-    border: 3px solid #87cefa;
+    border: 3px solid #fcfcfc;
     border-radius: 12px;
     overflow: hidden;
     background-color: white;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
     transition: transform 0.3s ease;
+    margin-bottom: 2rem; 
 }
 
 .gallery-horizontal figure:hover {
-    transform: scale(1.02); 
+    transform: scale(1.03);
 }
 
 .gallery-horizontal img {
     width: 100%;
-    height: 200px; 
+    height: 400px; 
     object-fit: cover;
     display: block;
 }
 
 .gallery-horizontal figcaption {
-    padding: 0.8rem 1rem;
-    font-size: 1.4rem;
+    padding: 1rem;
+    font-size: 1.5rem;
     color: #333;
     font-weight: 500;
     background-color: #f9f9f9;
 }
+
 
 /* BLOG */
 #blog {
@@ -221,6 +226,7 @@ section {
     display: inline-block;
     margin-top: 1rem;
 }
+
 
 /* CONTACT */
 #contact h2 {
@@ -273,6 +279,7 @@ form button:hover {
     box-shadow: 0 0 12px var(--shadow);
 }
 
+
 /* RESPONSIVE */
 @media (max-width: 768px) {
     html {
@@ -288,7 +295,8 @@ form button:hover {
     }
 }
 
-/* THANK YOU PAGE */
+
+/* MESSAGES SENT PAGE */
 .thank-you-box {
     background: linear-gradient(to bottom, #f0f8ff, #e6f2ff);
     border-radius: 20px;
@@ -344,5 +352,58 @@ form button:hover {
     to {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+
+/* EFEK ANIMASI FADE IN */
+.fade-in {
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
+}
+
+section {
+    opacity: 0;
+}
+
+/* Tampilan menu di perangkat besar */
+#navbar {
+    display: flex;
+    gap: 2rem;
+}
+
+/* Menu Hamburger untuk perangkat kecil */
+#hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+#hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+}
+
+@media (max-width: 768px) {
+    #navbar {
+        display: none;
+        flex-direction: column;
+        gap: 1rem;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #fff;
+        padding: 1rem;
+    }
+
+    #hamburger {
+        display: flex;
+    }
+
+    #navbar.active {
+        display: flex;
     }
 }
