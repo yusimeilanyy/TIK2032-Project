@@ -1,0 +1,128 @@
+:root {
+    --soft-blue: #dceaff;
+    --sky-blue: #a3c9f9;
+    --pastel-blue: #c2d9ff;
+    --lavender: #e6e6fa;
+    --text-dark: #2d2d2d;
+    --text-light: #4f4f4f;
+    --accent: #aac8ff;
+    --shadow: rgba(163, 201, 249, 0.3);
+    --white-glass: rgba(255, 255, 255, 0.4);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    scroll-behavior: smooth;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background: linear-gradient(to bottom, #f5faff, #eaefff);
+    color: var(--text-dark);
+    overflow-x: hidden;
+}
+
+/* Gallery Section */
+#gallery {
+    padding: 4rem 2rem;
+    text-align: center;
+    background: linear-gradient(to bottom, #f0f8ff, #e6f2ff);
+    border-radius: 10px;
+    box-shadow: 0 4px 15px var(--shadow);
+}
+
+#gallery h2 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: var(--sky-blue);
+    margin-bottom: 1rem;
+    font-family: 'Poppins', sans-serif;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+#gallery p {
+    font-size: 1.8rem;
+    color: var(--text-light);
+    margin-bottom: 3rem;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+    font-style: italic;
+    font-family: 'Poppins', sans-serif;
+}
+
+.gallery-horizontal {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-top: 3rem;
+}
+
+.gallery-horizontal figure {
+    width: 100%;
+    max-width: 300px; 
+    border: 3px solid #87cefa;
+    border-radius: 12px;
+    overflow: hidden;
+    background-color: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+    padding: 1rem;
+    transition: all 0.3s ease;
+}
+
+.gallery-horizontal figure:hover {
+    transform: scale(1.05);
+}
+
+.gallery-horizontal img {
+    width: 100%;
+    height: auto; 
+    object-fit: cover;
+    border-radius: 8px;
+    display: block;
+}
+
+.gallery-horizontal figcaption {
+    padding: 1rem;
+    font-size: 1.4rem;
+    color: var(--text-dark);
+    font-weight: 500;
+    background-color: #f9f9f9;
+    text-align: center;
+    font-style: italic;
+}
+
+/* Subtle Hover Effect for Images */
+.gallery-horizontal figure:hover img {
+    opacity: 0.8;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    html {
+        font-size: 55%;
+    }
+
+    #gallery h2 {
+        font-size: 3rem;
+    }
+
+    #gallery p {
+        font-size: 1.6rem;
+        max-width: 600px;
+    }
+
+    .gallery-horizontal {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+}

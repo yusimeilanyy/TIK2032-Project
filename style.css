@@ -1,0 +1,348 @@
+:root {
+    --soft-blue: #dceaff;
+    --sky-blue: #a3c9f9;
+    --pastel-blue: #c2d9ff;
+    --lavender: #e6e6fa;
+    --text-dark: #2d2d2d;
+    --text-light: #4f4f4f;
+    --accent: #aac8ff;
+    --shadow: rgba(163, 201, 249, 0.3);
+    --white-glass: rgba(255, 255, 255, 0.4);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    scroll-behavior: smooth;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background: linear-gradient(to bottom, #f5faff, #eaefff);
+    color: var(--text-dark);
+    overflow-x: hidden;
+}
+
+/* HEADER */
+header {
+    width: 100%;
+    padding: 1.5rem 10%;
+    background-color: var(--white-glass);
+    backdrop-filter: blur(10px);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #dfeaff;
+    box-shadow: 0 4px 12px var(--shadow);
+}
+
+.logo {
+    font-size: 2.8rem;
+    color: var(--sky-blue);
+    font-weight: 700;
+}
+
+nav a {
+    font-size: 1.6rem;
+    margin-left: 3rem;
+    color: var(--text-dark);
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: var(--sky-blue);
+    left: 0;
+    bottom: -4px;
+    transition: 0.3s ease;
+}
+
+nav a:hover {
+    color: var(--sky-blue);
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+/* HOME */
+section {
+    min-height: 100vh;
+    padding: 6rem 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.home {
+    text-align: center;
+    padding-top: 8rem;
+}
+
+.home h1 {
+    font-size: 5.5rem;
+    font-weight: 700;
+    color: var(--sky-blue);
+    margin-bottom: 1rem;
+}
+
+.typing-text {
+    font-size: 2.4rem;
+    font-weight: 500;
+    color: var(--text-light);
+    margin-bottom: 2rem;
+}
+
+.home p {
+    font-size: 1.6rem;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.8;
+    color: var(--text-light);
+}
+
+.btn {
+    margin-top: 2rem;
+    padding: 1rem 2.8rem;
+    font-size: 1.6rem;
+    background-color: white;
+    color: var(--sky-blue);
+    border: 2px solid var(--sky-blue);
+    border-radius: 3rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background-color: var(--sky-blue);
+    color: white;
+    box-shadow: 0 4px 15px var(--shadow);
+}
+
+/* GALLERY */
+#gallery {
+    padding: 4rem 2rem;
+    text-align: center;
+    background: linear-gradient(to bottom, #f0f8ff, #e6f2ff);
+}
+
+#gallery h2 {
+    margin-bottom: 2rem;
+    color: #4682b4;
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.gallery-horizontal {
+    display: flex; 
+    justify-content: center; 
+    gap: 2rem; 
+    flex-wrap: wrap; 
+}
+
+.gallery-horizontal figure {
+    width: 100%;
+    max-width: 300px; 
+    border: 3px solid #87cefa;
+    border-radius: 12px;
+    overflow: hidden;
+    background-color: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+}
+
+.gallery-horizontal figure:hover {
+    transform: scale(1.02); 
+}
+
+.gallery-horizontal img {
+    width: 100%;
+    height: 200px; 
+    object-fit: cover;
+    display: block;
+}
+
+.gallery-horizontal figcaption {
+    padding: 0.8rem 1rem;
+    font-size: 1.4rem;
+    color: #333;
+    font-weight: 500;
+    background-color: #f9f9f9;
+}
+
+/* BLOG */
+#blog {
+    text-align: center;
+}
+
+#blog h2 {
+    font-size: 4rem;
+    color: var(--sky-blue);
+    margin-bottom: 3rem;
+}
+
+#blog article {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 1.5rem;
+    box-shadow: 0 4px 8px var(--shadow);
+    max-width: 700px;
+    margin: 2rem auto;
+}
+
+#blog img {
+    width: 100%;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+}
+
+#blog h3 {
+    font-size: 2.2rem;
+    color: var(--text-dark);
+}
+
+#blog a {
+    color: var(--sky-blue);
+    font-weight: 600;
+    display: inline-block;
+    margin-top: 1rem;
+}
+
+/* CONTACT */
+#contact h2 {
+    font-size: 4rem;
+    color: var(--sky-blue);
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.contact-info {
+    text-align: center;
+    color: var(--text-light);
+    font-size: 1.6rem;
+}
+
+form {
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    max-width: 600px;
+    padding: 1.2rem;
+    margin-bottom: 1.5rem;
+    border-radius: 1rem;
+    border: 1px solid var(--accent);
+    background-color: white;
+    font-size: 1.6rem;
+    color: var(--text-dark);
+}
+
+form button {
+    padding: 1rem 3rem;
+    border: 2px solid var(--accent);
+    background-color: transparent;
+    color: var(--sky-blue);
+    font-weight: 600;
+    border-radius: 3rem;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: var(--accent);
+    color: white;
+    box-shadow: 0 0 12px var(--shadow);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    html {
+        font-size: 55%;
+    }
+
+    nav a {
+        font-size: 1.4rem;
+    }
+
+    .home h1 {
+        font-size: 4rem;
+    }
+}
+
+/* THANK YOU PAGE */
+.thank-you-box {
+    background: linear-gradient(to bottom, #f0f8ff, #e6f2ff);
+    border-radius: 20px;
+    box-shadow: 0 6px 18px var(--shadow);
+    text-align: center;
+    padding: 4rem 3rem;
+    max-width: 500px;
+    width: 90%;
+    margin: 10vh auto;
+    animation: fadeIn 1s ease-out;
+}
+
+.thank-you-box h1 {
+    font-size: 3.2rem;
+    color: var(--sky-blue);
+    margin-bottom: 2rem;
+}
+
+.thank-you-box p {
+    font-size: 1.8rem;
+    color: var(--text-light);
+    line-height: 2.6rem;
+    margin-bottom: 2.5rem;
+    font-style: italic;
+}
+
+.thank-you-box .emoji {
+    font-size: 4rem;
+    margin-bottom: 2rem;
+}
+
+.thank-you-box a {
+    font-size: 1.6rem;
+    color: white;
+    background-color: var(--sky-blue);
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    display: inline-block;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 12px var(--shadow);
+}
+
+.thank-you-box a:hover {
+    background-color: var(--accent);
+    transform: scale(1.05);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
