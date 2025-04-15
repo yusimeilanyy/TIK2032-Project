@@ -366,44 +366,60 @@ section {
     opacity: 0;
 }
 
-/* Tampilan menu di perangkat besar */
-#navbar {
-    display: flex;
-    gap: 2rem;
-}
 
-/* Menu Hamburger untuk perangkat kecil */
+/* HAMBURGER MENU*/
 #hamburger {
+    cursor: pointer;
     display: none;
     flex-direction: column;
-    gap: 5px;
-    cursor: pointer;
+    gap: 6px;
+    padding: 10px;
+    z-index: 1001;
 }
 
 #hamburger span {
+    display: block;
     width: 25px;
     height: 3px;
     background-color: #333;
+    border-radius: 2px;
 }
 
-@media (max-width: 768px) {
-    #navbar {
-        display: none;
-        flex-direction: column;
-        gap: 1rem;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        width: 100%;
-        background-color: #fff;
-        padding: 1rem;
-    }
+/* Navigasi untuk mobile (disembunyikan dulu) */
+header nav {
+    display: none;
+    flex-direction: column;
+    background: #fff;
+    position: absolute;
+    top: 60px; /* Sesuaikan dengan tinggi header */
+    right: 10px;
+    width: 180px;
+    padding: 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    z-index: 1000;
+}
 
+/* Saat hamburger aktif */
+header nav.active {
+    display: flex;
+}
+
+/* Tampilkan normal saat desktop */
+@media (min-width: 768px) {
     #hamburger {
-        display: flex;
+        display: none;
     }
 
-    #navbar.active {
-        display: flex;
+    header nav {
+        display: flex !important;
+        position: static;
+        flex-direction: row;
+        background: none;
+        box-shadow: none;
+        padding: 0;
+    }
+
+    header nav a {
+        margin-left: 1rem;
     }
 }
