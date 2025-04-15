@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const typingText = document.querySelector('.typing-text span');
     const textContent = "Informatics engineering student";
     let index = 0;
-    
+
     function typeText() {
         if (index < textContent.length) {
             typingText.innerHTML += textContent.charAt(index);
@@ -14,14 +14,13 @@ document.addEventListener('DOMContentLoaded', function () {
                 typingText.innerHTML = "";
                 index = 0;
                 typeText();
-            }, 2000); 
+            }, 2000);
         }
     }
-    
+
     if (typingText) {
         typeText();
     }
-    
 
     /* Efek Animasi saat Scroll (Fade-in) */
     const sections = document.querySelectorAll('section');
@@ -43,14 +42,4 @@ document.addEventListener('DOMContentLoaded', function () {
     sections.forEach(section => {
         observer.observe(section);
     });
-
-    /* Hamburger Menu */
-    const hamburger = document.getElementById('hamburger');
-    const nav = document.querySelector('header nav');
-
-    if (hamburger && nav) {
-        hamburger.addEventListener('click', function () {
-            nav.classList.toggle('active');
-        });
-    }
 });
