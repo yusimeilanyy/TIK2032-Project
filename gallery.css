@@ -24,6 +24,7 @@ html {
 }
 
 body {
+    padding-top: 80px; /* menyesuaikan tinggi navbar */
     background: linear-gradient(to bottom, #f5faff, #eaefff);
     color: var(--text-dark);
     overflow-x: hidden;
@@ -31,12 +32,13 @@ body {
 
 /* Gallery Section */
 #gallery {
-    padding: 4rem 2rem;
+    padding: 8rem 2rem 4rem 2rem; /* atas kanan bawah kiri */
     text-align: center;
     background: linear-gradient(to bottom, #f0f8ff, #e6f2ff);
     border-radius: 10px;
     box-shadow: 0 4px 15px var(--shadow);
 }
+
 
 #gallery h2 {
     font-size: 3.5rem;

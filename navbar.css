@@ -1,0 +1,82 @@
+:root {
+    --soft-blue: #dceaff;
+    --sky-blue: #a3c9f9;
+    --pastel-blue: #c2d9ff;
+    --lavender: #e6e6fa;
+    --text-dark: #2d2d2d;
+    --text-light: #4f4f4f;
+    --accent: #aac8ff;
+    --shadow: rgba(163, 201, 249, 0.3);
+    --white-glass: rgba(255, 255, 255, 0.4);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    scroll-behavior: smooth;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background: linear-gradient(to bottom, #f5faff, #eaefff);
+    color: var(--text-dark);
+    overflow-x: hidden;
+    padding-top: 100px; /* ← Tambahkan baris ini */
+}
+
+
+/* HEADER */
+header {
+    width: 100%;
+    padding: 1.5rem 10%;
+    background-color: var(--white-glass);
+    backdrop-filter: blur(10px);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #dfeaff;
+    box-shadow: 0 4px 12px var(--shadow);
+}
+
+.logo {
+    font-size: 2.8rem;
+    color: var(--sky-blue);
+    font-weight: 700;
+}
+
+nav a {
+    font-size: 1.6rem;
+    margin-left: 3rem;
+    color: var(--text-dark);
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: var(--sky-blue);
+    left: 0;
+    bottom: -4px;
+    transition: 0.3s ease;
+}
+
+nav a:hover {
+    color: var(--sky-blue);
+}
+
+nav a:hover::after {
+    width: 100%;
+}
